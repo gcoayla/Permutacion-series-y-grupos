@@ -10,20 +10,14 @@ const descifrar = (e) => {
     error.replaceChildren("la llave no es lo suficientemente larga")
     return
   }
-
-  for (let i = 1; i <= key.value.length ; i++) {
-    if(!key.value.includes(i.toString()) ) {
-      error.replaceChildren("la llave tiene valores incomplatibles")
-      return
-    }
-  }
   
   if(cifrado.value === '') {
     error.replaceChildren("Ingrese texto a descifrar")
     return
   }
   error.replaceChildren("")
-  const keyLength = key.value.length
+  const newKey = key.value.split(' ')
+  const keyLength = newKey.length
 
   var parts = []
   for (var i = 0, charsLength = cifrado.value.length; i < charsLength; i += keyLength) {
@@ -35,7 +29,7 @@ const descifrar = (e) => {
   for (let i = 0; i < parts.length; i++) {
     let tmp = new Array(keyLength)
     for (let j = 0; j < keyLength; j++) {
-      tmp[key.value[j]-1] = parts[i][j]
+      tmp[newKey[j]-1] = parts[i][j]
     }
     result.push(tmp.join(''))
   }
