@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#textarea {
+  width: 90%;
+  margin: 0 5%;
+  height: 200px;
+}
+
+#key {
+  width: 90%;
+}
+
+#resultado {
+  width: 90%;
+  height: 200px;
+  margin: 0 5%;
+}
+
+#error {
+  color: red;
+}
+
+#submit-button {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.container-50 {
+  box-sizing: border-box;
+  width: 50%;
+  height: 250px;
+  float: left;
+  margin-top: 20px;
+}
